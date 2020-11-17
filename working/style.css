@@ -28,9 +28,20 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3, 
+p {
+    margin: 0;
+}
+
 /* ////////////////
     Utility
 //////////////// */
+
+.flow-content > * + * {
+    margin-top: 1rem;
+}
 
 /* ////////////////
     Basic
@@ -48,21 +59,13 @@ body {
     Typeography
 //////////////// */
 
-* {
-    margin-top: 0;
-}
-
 h1 {
     font-size: var(--fs-36);
     font-weight: var(--fw-400);
 }
 
-.cta span {
+.hero__content span {
     font-weight: var(--fw-700);
-}
-
-.cta p {
-    margin-bottom: 2em;
 }
 
 /* ////////////////
@@ -75,15 +78,14 @@ h1 {
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 1em;
+    justify-content: center;   
+    padding-top: 14rem;
+    padding-bottom: 10rem;
 }
 
-.cta {
+.hero__content {
     text-align: center;
-    padding: 1.5em;    
+    padding: 1.5rem;    
     max-width: 47.25rem;
     background: var(--clr-neutral-white);
 
@@ -97,8 +99,8 @@ h1 {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;    
-    padding: 1em 2em;
-    letter-spacing: 2px;
+    padding: .75em 1.5em;
+    letter-spacing: .125rem;
     font-weight: var(--fw-700);
     font-size: var(--fs-18);
     color: var(--clr-neutral-dark);
