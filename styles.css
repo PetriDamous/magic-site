@@ -77,21 +77,6 @@ ol[class] {
     }
 }
 
-.cta-bg-1 {
-    background-image: url(./assets/cta-bg-1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-}
-
-.cta-bg-2 {
-    background-image: url(./assets/cta-bg-1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .bg-dark {
     --clr-highlight: var(--clr-accent);
     --btn-bg: var(--clr-neutral-white);
@@ -108,6 +93,26 @@ ol[class] {
     --box-clr: var(--clr-neutral-dark);
     background-color: var(--clr-accent);
     color: var(--clr-neutral-dark); 
+}
+
+.cta-bg-1 {
+    background-image: url(./assets/cta-bg-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
+.cta-bg-2 {
+    background-image: url(./assets/cta-bg-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
+.box-dark {
+    --box-clr: var(--clr-neutral-dark);
 }
 
 .txt-accent {
@@ -136,19 +141,24 @@ ol[class] {
 }
 
 .flow-content > * + * {
-    margin-top: var(--flow-space, var(--spacer));
+    margin-top: var(--flow-top, var(--spacer));
+    margin-bottom: var(--flow-bottom, 0);
 }
 
 .m-top-n {
-    --flow-space: 0;
+    --flow-top: 0;
 }
 
 .m-top-lg {
-    --flow-space: 3rem;
+    --flow-top: 3rem;
 }
 
 .m-top-sm {
-    --flow-space: .5rem;
+    --flow-top: .5rem;
+}
+
+.m-btm-xl {
+    --flow-bottom: 5rem;
 }
 
 /* Base Styles */
@@ -221,6 +231,20 @@ header {
 
 /* Features */
 
+.all-access li::before {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--box-clr, var(--clr-accent));
+    position: absolute;
+    z-index: -1;
+    transform: translate(-.5rem, -.5rem); 
+}
+
+.all-access img {
+    box-shadow: var(--box-shadow);
+}
 
 
 /* Testimonials */
@@ -241,8 +265,8 @@ header {
     transform: translate(-2.5rem, -2.5rem);
 }
 
-.client {
-    --flow-space: 2rem;
+.testimonial__footer {
+    --flow-top: 2rem;
 }
 
 /* Components */
